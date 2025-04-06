@@ -1,5 +1,27 @@
 #include <stdio.h>
 
+
+int addition(int numberone, int numbertwo) {
+    return numberone+numbertwo;
+}
+
+
+int subtraction(int numberone, int numbertwo) {
+    return numberone-numbertwo;
+}
+
+
+int multiplication(int numberone, int numbertwo) {
+    return numberone*numbertwo;
+}
+
+
+
+
+int division(int numberone, int numbertwo) {
+    return numberone/numbertwo;
+}
+
 int main(){
  char operator;
  int num1;
@@ -18,24 +40,21 @@ scanf("%d %d", &num1, &num2);
 
 switch (operator){
     case'+':
-        result= num1 + num2;
-
+       result = addition(num1, num2);
 
     break;
 
 
     case'-':
 
-        result= num1 - num2;
+        result=subtraction(num1, num2);
 
     break;
 
 
-
-
     case'*':
 
-        result= num1 * num2;
+        result= division(num1, num2);
 
 
     break;
@@ -45,7 +64,7 @@ switch (operator){
     case'/':
 
         if(num2 !=0){
-            result = num1 / num2;
+            result = division(num1, num2);
         } else {
             printf("ILLEGAL");
             return 1;
